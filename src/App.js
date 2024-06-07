@@ -36,7 +36,8 @@ function App() {
       />{" "}
       {/* Pass scrollToSection as prop */}
       <div ref={homeRef}>
-        <div className="h-screen relative w-screen overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+        <div className="h-screen relative w-screen overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg" style={{ borderRadius: "0px" }}
+>
           <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
           <Boxes />
           <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-4 md:px-8 z-30">
