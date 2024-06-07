@@ -1,0 +1,82 @@
+/* Styling for the quote component */
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+  padding: 40px 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: #021709;
+  color: white;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+  margin-top: 12%;
+  height: 30vh;
+}
+
+.quote {
+  font-size: 1.5em;
+  font-style: italic;
+  color: white;
+  position: relative;
+}
+
+.quote-mark {
+  font-size: 2em;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.author {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #777777;
+  margin-left: 34%;
+}
+
+/* Hover effect */
+.quote-container:hover {
+  animation: pulse 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+/* Fade-in animation */
+
+/* Unique animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Big inverted commas in box border */
+.quote-container::before,
+.quote-container::after {
+  font-size: 5em;
+  color: #ccc;
+  position: absolute;
+}
+
+.quote-container::before {
+  top: -30px;
+  left: -30px;
+}
+
+.quote-container::after {
+  bottom: -30px;
+  right: -20px;
+  transform: rotate(180deg);
+}

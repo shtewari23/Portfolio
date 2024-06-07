@@ -1,0 +1,124 @@
+.skill-div {
+  background-color: #10182b;
+  height: 37em;
+}
+
+.flip-card {
+  width: 60%;
+  top: 0;
+  background: none;
+  width: 70%;
+  position: relative;
+
+  justify-content: center; /* Center the grid horizontally */
+  align-content: center; /* Center the grid vertically */
+  margin: auto; /* Center the grid container itself */
+  padding: 14px;
+  border-radius: 15px;
+
+  padding: 14px;
+  transform: translateY(20px); /* Start position for animation */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+  height: 36%;
+}
+.parent-skills {
+}
+
+.flip-card-side {
+  border-radius: 16px;
+  transition: transform 0.8s ease;
+  backface-visibility: hidden;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px; /* 10px space between columns */
+  position: absolute;
+  padding: 20px;
+}
+.flip-card-side.front {
+  background-image: linear-gradient(43deg);
+  border: 2px solid green;
+}
+.flip-card-side.back {
+  background-image: linear-gradient(160deg);
+  border: 2px solid green;
+
+  transform: rotateY(180deg);
+}
+.flip-card:hover .flip-card-side.front {
+  transform: rotateY(180deg);
+}
+.flip-card:hover .flip-card-side.back {
+  transform: rotateY(360deg);
+}
+
+.child-skills {
+  height: 80px;
+  background-color: #021709;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px; /* Padding inside each skill box */
+  justify-content: space-evenly;
+  font-size: 18px;
+  font-family: ExoSpace;
+  overflow: hidden; /* Hide the overflowing pseudo-element */
+  z-index: 1; /* Ensure the text is above the pseudo-element */
+  border: 2px solid white;
+  width: 250px;
+  margin-left: 30px;
+  margin-top: 22%;
+}
+.child {
+  display: flex;
+  height: 20%;
+  width: 20%;
+  position: absolute;
+  left: -10%;
+  top: 38%;
+  background-color: #021709;
+  justify-content: space-evenly;
+  font-size: 18px;
+  font-family: ExoSpace;
+  border: 2px solid green;
+  justify-content: center;
+  padding-top: 2px;
+  border-radius: 20px;
+}
+
+.skill-logo {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.child-skills::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #138036;
+  transition: width 1s ease-in-out; /* Smooth transition */
+  z-index: 0; /* Behind the text */
+  opacity: 0.2; /* Slight opacity to ensure text visibility */
+}
+
+.child-skills:hover::before {
+  width: 100%; /* Expand to full width on hover */
+}
+
+.child-skills:hover {
+  color: white; /* Ensure text color stays white on hover */
+}
+
+.child-skills > * {
+  position: relative; /* Ensure the content is above the pseudo-element */
+  z-index: 1;
+  color: white; /* Ensure text color stays white */
+}

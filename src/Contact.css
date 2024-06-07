@@ -1,0 +1,52 @@
+.contact-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  padding-right: 4cm;
+}
+
+.contact-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: url("point.png"), auto; /* Set custom cursor image */
+}
+
+.contact-link:hover {
+  transform: scale(1.1);
+  color: #61dafb;
+  cursor: url("point.png"), auto; /* Set custom cursor image */
+}
+
+.contact-icon {
+  margin-right: 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover .contact-icon {
+  color: #61dafb;
+}
+
+@media (max-width: 600px) {
+  .contact-footer {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    margin: 10px 0;
+  }
+}

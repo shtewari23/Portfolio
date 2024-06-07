@@ -1,0 +1,21 @@
+
+.box{
+    align-items: center;
+  background: #0d1529;
+  border-radius: 12px;
+  box-shadow: inset 0 0 4px 1px #14e956;
+  -webkit-box-shadow: inset 0 0 4px 1px #14e956;
+  -moz-box-shadow: inset 0 0 4px 1px #14e956;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+  padding: .8rem 2rem;
+}
+.title{
+    color: #14e956;
+    font-weight: 900;
+    text-shadow: 3px 3px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+  line-height: 48px;
+}
